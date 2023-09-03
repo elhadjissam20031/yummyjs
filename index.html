@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/bootstrap.min.css" />
+    <link rel="shortcut icon" href="img/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css" />
+    <title>Yummy</title>
+  </head>
+  <body>
+
+    <div class="spinner d-none">
+      <span></span>
+    </div>
+    <div class="container-yummy">
+      <div class="side-menu">
+        <div class="left-side-menu p-4">
+          <div class="nav-lists">
+            <ul class="nav-links ">
+
+              <li class="nav-list" id="t">Search</li>
+              <li class="nav-list" id="tt">Categories</li>
+              <li class="nav-list" id="ttt">Area</li>
+              <li class="nav-list" id="tttt">Ingredients</li>
+              <li class="nav-list" id="ttttt">Contact Us</li>
+            </ul>
+          </div>
+          <div class="nav-footer">
+            <div class="share">
+              <a href="#"><i class="fa-brands fa-facebook"></i></a>
+              <a href="#"> <i class="fa-brands fa-twitter"></i></a>
+              <a href="#"> <i class="fa-solid fa-globe"></i></a>
+            </div>
+            <p>Copyright Â© 2019 All Rights Reserved.</p>
+          </div>
+        </div>
+        <div class="right-side-menu py-4">
+          <div class="logo">
+            <img src="img/logo.png" alt="logo yummy" class="logo w-100" />
+          </div>
+          <div class="open-close">
+            <i class="fa-solid fa-2x open-close-icon fa-align-justify"></i>
+          </div>
+          <div class="social">
+            <a href="#"><i class="fa-solid fa-x fa-globe my-2"></i></a>
+            <a href="#"> <i class="fa-solid fa-x fa-share-nodes"></i> </a>
+          </div>
+        </div>
+      </div>
+      <div class="content-yummy container">
+        <div class="page0" id="page0">
+          <div class="meal-result mt-4">
+            <div class="row py-5 g-4" id="mealContainer"></div>
+          </div>
+          
+          </div>
+          <div class="page1" id="page1">
+          <div class="search-yummy w-75 mx-auto mt-4">
+            <form class="form">
+              <div class="row">
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    placeholder="Search By Name"
+                    class="form-control bg-transparent text-light"
+                    id="searchByNameInput"
+                  />
+                </div>
+                <div class="col-md-6">
+                  <input
+                    type="text"
+                    placeholder="Search By First Letter"
+                    class="form-control bg-transparent text-light"
+                    maxlength="1"
+                    id="searchByFristLetterInput"
+                  />
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="search-result mt-4">
+            <div class="row py-5 g-4" id="searchContainer"></div>
+          </div>
+          
+          </div>
+          <div class="page2" id="page2">
+            <div class="categories-yummy">
+              <div class="row py-5 g-4" id="categoriesContainer"></div>
+            </div>
+          </div>
+          <div class="page3" id="page3">
+            <div class="area-yummy">
+              <div class="row py-4 g-4" id="areaContainer"></div>
+            </div>
+          </div>
+          <div class="page4" id="page4">
+            <div class="ingrediants-yummy">
+              <div class="row py-4 g-3" id="ingredientsContainer"></div>
+            </div>
+          </div>
+          <div class="page5" id="page5">
+            <div class="contact-yummy">
+              <form class="w-75 mx-auto" novalidate id="formContact">
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Your Name" id="inputName"
+                    />
+                    <div class="error mt-2 p-2 fs-6" id="errName">Special characters and numbers not allowed
+                    </div>
+
+                    <div class="error"></div>
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="email"
+                      class="form-control"
+                      placeholder="Enter Your Email" id="inputEmail"
+                    />
+                    <div class="error mt-2 p-2 fs-6" id="errEmail">Email not valid *exemple@yyy.zzz
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <input
+                      type="text"
+                      class="form-control"
+                      placeholder="Enter Your Phone" id="inputNumber"
+                    />
+                    <div class="error mt-2 p-2 fs-6" id="errNumber">Enter valid Phone Number
+                    </div>
+
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="number"
+                      class="form-control"
+                      placeholder="Enter Your Age" id="inputAge"
+                    />
+                    <div class="error mt-2 p-2 fs-6" id="errAge">Enter valid age
+                    </div>
+
+                  </div>
+                </div>
+                <div class="row g-4 mb-4">
+                  <div class="col-md-6">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Enter Your Password" id="inputPassword"
+                    />
+                    <div class="error mt-2 p-2 fs-6" id="errPass">Enter valid password *Minimum eight characters, at least one letter and one number:*
+                    </div>
+
+                  </div>
+                  <div class="col-md-6">
+                    <input
+                      type="password"
+                      class="form-control"
+                      placeholder="Repassword" id="inputRePassword"
+                    />
+                    <div class="error mt-2 p-2 fs-6" id="errRePass">Enter valid repassword</div>
+
+                  </div>
+                </div>
+                <button
+                  type="submit"
+                  class="btn btn-outline-danger d-block mx-auto" id="btnSubmit" disabled
+                >
+                  Submit
+                </button>
+              </form>
+            </div>
+          </div>
+          <div class="page6" id="page6">
+            <div class="instructions-yummy">
+              <div class="row py-4 g-4" id="instructionsContainer">
+
+              </div>
+            </div>
+
+          </div>
+          <div class="page7" id="page7">
+            <div class="by-categorie-yummy">
+              <div class="row py-4 g-4" id="byCategorieContainer">
+
+              </div>
+            </div>
+
+          </div>
+          <div class="page8" id="page8">
+            <div class="by-area-yummy">
+              <div class="row py-4 g-4" id="byAreasContainer">
+
+              </div>
+            </div>
+
+          </div>
+          <div class="page9" id="page9">
+            <div class="by-ingredient-yummy">
+              <div class="row py-4 g-4" id="byIngredientsContainer">
+
+              </div>
+            </div>
+
+          </div>
+          
+        </div>
+      </div>
+    </div>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/all.min.js"></script>
+    <script src="js/code.jquery.com_jquery-3.7.1.min.js"></script>
+
+    <script src="js/script.js"></script>
+  </body>
+</html>
+
+
